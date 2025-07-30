@@ -19,7 +19,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json()); 
 app.use(cookieParser());
 const corsOption={
-    origin:"http://localhost:3000",
+    origin:process.env.FRONTEND_HOS,
     credentials:true
 };
 app.use(cors(corsOption)); 
